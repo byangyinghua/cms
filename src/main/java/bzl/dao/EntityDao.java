@@ -1,27 +1,23 @@
 package bzl.dao;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import bzl.dao.inter.EntityIDao;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.log4j.Logger;
-import bzl.dao.inter.EntityIDao;
-import bzl.service.EntityService;
 import org.junit.Test;
 import org.springframework.stereotype.Component;
-import utils.DjSessionFactory;
-//import utils.MyListener;
+import sun.rmi.log.LogHandler;
 import utils.ResultModel;
 import utils.SessionFactory;
 
-import sun.rmi.log.LogHandler;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 @Component
 public class EntityDao<T> implements EntityIDao<T> {
 		//ApplicationContext ctx = new ClassPathXmlApplicationContext("usermap-servlet.xml");
 		Logger log=Logger.getLogger(LogHandler.class);
-        private static SqlSessionFactory sessionFactory = SessionFactory.getInstance().getSqlSessionFactory();  
+        private static final SqlSessionFactory sessionFactory = SessionFactory.getInstance().getSqlSessionFactory();
     	
         /**
          * 根据类名和编号获得对象列表 
@@ -402,7 +398,7 @@ public class EntityDao<T> implements EntityIDao<T> {
 	        SqlSession session = null;  
 	        try {
 	            session = sessionFactory.openSession();  
-	            obj = (T) session.selectOne(classname+".selectByU", object);  
+	            obj = session.selectOne(classname+".selectByU", object);
 	        }catch(Exception e){
 	        	System.out.println("daoexception============================="+e);
 	        	log.warn(e);

@@ -32,7 +32,6 @@ package com.github.sarxos.webcam.ds.buildin.natives;
 import org.bridj.Pointer;
 import org.bridj.ann.Field;
 import org.bridj.ann.Library;
-import org.bridj.ann.Runtime;
 import org.bridj.cpp.CPPObject;
 import org.bridj.cpp.CPPRuntime;
 
