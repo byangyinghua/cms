@@ -35,6 +35,7 @@ public class FaceRecognitionModule {
 		int bNeedPicture = 1; // 是否需要图片
 	
 		LLong m_hAttachHandle =  LoginModule.netsdk.CLIENT_RealLoadPictureEx(LoginModule.m_hLoginHandle, channel, 
+									NetSDKLib.EVENT_IVS_ALL, bNeedPicture, callback, null, null);
         if(m_hAttachHandle.longValue() == 0) {
         	System.err.println("CLIENT_RealLoadPictureEx Failed, Error:" + ToolKits.getErrorCodePrint());
         } else {

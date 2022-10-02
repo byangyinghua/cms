@@ -174,3 +174,194 @@
 2022-05-10 13:08:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [G:\ideaProjects\cms\target\classes\bzl\mappering\UserGroup.xml]'
 2022-05-10 13:08:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [G:\ideaProjects\cms\target\classes\bzl\mappering\UserLog.xml]'
 2022-05-10 13:08:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [G:\ideaProjects\cms\target\classes\bzl\mappering\Val.xml]'
+2022-10-12 16:38:54 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\EntityDao.class]
+2022-10-12 16:38:54 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\EntityIDao.class]
+2022-10-12 16:38:54 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\MapIDao.class]
+2022-10-12 16:38:54 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\MapDao.class]
+2022-10-12 16:38:54 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'entityIDao' and 'bzl.dao.inter.EntityIDao' mapperInterface
+2022-10-12 16:38:54 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'mapIDao' and 'bzl.dao.inter.MapIDao' mapperInterface
+2022-10-12 16:38:54 LogFactory.java DEBUG Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Property 'configLocation' not specified, using default MyBatis Configuration
+2022-10-12 16:38:54 VFS.java DEBUG Class not found: org.jboss.vfs.VFS
+2022-10-12 16:38:54 JBoss6VFS.java DEBUG JBoss 6 VFS API is not available in this environment.
+2022-10-12 16:38:54 VFS.java DEBUG Class not found: org.jboss.vfs.VirtualFile
+2022-10-12 16:38:54 VFS.java DEBUG VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2022-10-12 16:38:54 VFS.java DEBUG Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Scanned package: '**.entity' for aliases
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Attachment.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BootSetting.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BoyaoSystem.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Camera.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfo.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfoTpl.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTask.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTaskTpl.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExtendServer.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Function.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\HelpInfo.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\JDBCUtil.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LampSetting.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LivePlay.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LoginLog.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ServerUpdate.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ShieldTask.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TaskInfo.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Terminal.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalGroup.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalLog.xml]'
+2022-10-12 16:38:54 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalUpdate.xml]'
+2022-10-12 16:38:55 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UrgencyTask.xml]'
+2022-10-12 16:38:55 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\User.xml]'
+2022-10-12 16:38:55 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserGroup.xml]'
+2022-10-12 16:38:55 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserLog.xml]'
+2022-10-12 16:38:55 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Val.xml]'
+2022-10-12 16:39:35 Log.java DEBUG £¨test£© --- 1
+2022-10-12 16:39:35 Log.java DEBUG £¨test£© --- 2
+2022-10-12 16:39:35 Log.java DEBUG £¨test£© --- 3
+2022-10-12 16:40:43 Log.java DEBUG £¨test£© --- 1
+2022-10-12 16:40:43 Log.java DEBUG £¨test£© --- 2
+2022-10-12 16:40:43 Log.java DEBUG £¨test£© --- 3
+2022-10-12 16:41:15 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\EntityDao.class]
+2022-10-12 16:41:15 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\EntityIDao.class]
+2022-10-12 16:41:15 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\MapIDao.class]
+2022-10-12 16:41:15 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\MapDao.class]
+2022-10-12 16:41:15 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'entityIDao' and 'bzl.dao.inter.EntityIDao' mapperInterface
+2022-10-12 16:41:15 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'mapIDao' and 'bzl.dao.inter.MapIDao' mapperInterface
+2022-10-12 16:41:15 LogFactory.java DEBUG Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Property 'configLocation' not specified, using default MyBatis Configuration
+2022-10-12 16:41:15 VFS.java DEBUG Class not found: org.jboss.vfs.VFS
+2022-10-12 16:41:15 JBoss6VFS.java DEBUG JBoss 6 VFS API is not available in this environment.
+2022-10-12 16:41:15 VFS.java DEBUG Class not found: org.jboss.vfs.VirtualFile
+2022-10-12 16:41:15 VFS.java DEBUG VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2022-10-12 16:41:15 VFS.java DEBUG Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Scanned package: '**.entity' for aliases
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Attachment.xml]'
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BootSetting.xml]'
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BoyaoSystem.xml]'
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Camera.xml]'
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfo.xml]'
+2022-10-12 16:41:15 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfoTpl.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTask.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTaskTpl.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExtendServer.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Function.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\HelpInfo.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\JDBCUtil.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LampSetting.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LivePlay.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LoginLog.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ServerUpdate.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ShieldTask.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TaskInfo.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Terminal.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalGroup.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalLog.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalUpdate.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UrgencyTask.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\User.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserGroup.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserLog.xml]'
+2022-10-12 16:41:16 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Val.xml]'
+2022-10-12 16:41:23 Log.java DEBUG £¨test£© --- 1
+2022-10-12 16:41:23 Log.java DEBUG £¨test£© --- 2
+2022-10-12 16:41:23 Log.java DEBUG £¨test£© --- 3
+2022-10-12 16:42:18 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\EntityDao.class]
+2022-10-12 16:42:18 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\EntityIDao.class]
+2022-10-12 16:42:18 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\MapIDao.class]
+2022-10-12 16:42:18 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\MapDao.class]
+2022-10-12 16:42:18 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'entityIDao' and 'bzl.dao.inter.EntityIDao' mapperInterface
+2022-10-12 16:42:18 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'mapIDao' and 'bzl.dao.inter.MapIDao' mapperInterface
+2022-10-12 16:42:18 LogFactory.java DEBUG Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2022-10-12 16:42:18 SqlSessionFactoryBean.java DEBUG Property 'configLocation' not specified, using default MyBatis Configuration
+2022-10-12 16:42:18 VFS.java DEBUG Class not found: org.jboss.vfs.VFS
+2022-10-12 16:42:18 JBoss6VFS.java DEBUG JBoss 6 VFS API is not available in this environment.
+2022-10-12 16:42:18 VFS.java DEBUG Class not found: org.jboss.vfs.VirtualFile
+2022-10-12 16:42:18 VFS.java DEBUG VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2022-10-12 16:42:18 VFS.java DEBUG Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2022-10-12 16:42:18 SqlSessionFactoryBean.java DEBUG Scanned package: '**.entity' for aliases
+2022-10-12 16:42:18 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Attachment.xml]'
+2022-10-12 16:42:18 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BootSetting.xml]'
+2022-10-12 16:42:18 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BoyaoSystem.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Camera.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfo.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfoTpl.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTask.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTaskTpl.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExtendServer.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Function.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\HelpInfo.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\JDBCUtil.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LampSetting.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LivePlay.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LoginLog.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ServerUpdate.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ShieldTask.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TaskInfo.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Terminal.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalGroup.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalLog.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalUpdate.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UrgencyTask.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\User.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserGroup.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserLog.xml]'
+2022-10-12 16:42:19 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Val.xml]'
+2022-10-12 16:42:33 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\EntityDao.class]
+2022-10-12 16:42:33 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\EntityIDao.class]
+2022-10-12 16:42:33 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\MapIDao.class]
+2022-10-12 16:42:33 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\MapDao.class]
+2022-10-12 16:42:33 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'entityIDao' and 'bzl.dao.inter.EntityIDao' mapperInterface
+2022-10-12 16:42:33 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'mapIDao' and 'bzl.dao.inter.MapIDao' mapperInterface
+2022-10-12 16:43:03 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\EntityDao.class]
+2022-10-12 16:43:03 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\EntityIDao.class]
+2022-10-12 16:43:03 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\MapIDao.class]
+2022-10-12 16:43:03 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\MapDao.class]
+2022-10-12 16:43:03 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'entityIDao' and 'bzl.dao.inter.EntityIDao' mapperInterface
+2022-10-12 16:43:03 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'mapIDao' and 'bzl.dao.inter.MapIDao' mapperInterface
+2022-10-12 16:43:07 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\EntityDao.class]
+2022-10-12 16:43:07 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\EntityIDao.class]
+2022-10-12 16:43:07 ClassPathScanningCandidateComponentProvider.java DEBUG Identified candidate component class: file [F:\ideaProjects\cms\target\classes\bzl\dao\inter\MapIDao.class]
+2022-10-12 16:43:07 ClassPathScanningCandidateComponentProvider.java DEBUG Ignored because not a concrete top-level class: file [F:\ideaProjects\cms\target\classes\bzl\dao\MapDao.class]
+2022-10-12 16:43:07 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'entityIDao' and 'bzl.dao.inter.EntityIDao' mapperInterface
+2022-10-12 16:43:07 ClassPathMapperScanner.java DEBUG Creating MapperFactoryBean with name 'mapIDao' and 'bzl.dao.inter.MapIDao' mapperInterface
+2022-10-12 16:43:08 LogFactory.java DEBUG Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Property 'configLocation' not specified, using default MyBatis Configuration
+2022-10-12 16:43:08 VFS.java DEBUG Class not found: org.jboss.vfs.VFS
+2022-10-12 16:43:08 JBoss6VFS.java DEBUG JBoss 6 VFS API is not available in this environment.
+2022-10-12 16:43:08 VFS.java DEBUG Class not found: org.jboss.vfs.VirtualFile
+2022-10-12 16:43:08 VFS.java DEBUG VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2022-10-12 16:43:08 VFS.java DEBUG Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Scanned package: '**.entity' for aliases
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Attachment.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BootSetting.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\BoyaoSystem.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Camera.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfo.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamInfoTpl.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTask.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExamTaskTpl.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ExtendServer.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Function.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\HelpInfo.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\JDBCUtil.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LampSetting.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LivePlay.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\LoginLog.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ServerUpdate.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\ShieldTask.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TaskInfo.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Terminal.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalGroup.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalLog.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\TerminalUpdate.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UrgencyTask.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\User.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserGroup.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\UserLog.xml]'
+2022-10-12 16:43:08 SqlSessionFactoryBean.java DEBUG Parsed mapper file: 'file [F:\ideaProjects\cms\target\classes\bzl\mappering\Val.xml]'
+2022-10-12 16:44:25 VideoConverter.java DEBUG start to convert video to flv format...
+2022-10-12 16:44:25 VideoConverter.java DEBUG the file name is : 1234.mp4
+2022-10-12 16:44:25 VideoConverter.java DEBUG the file path is : F:\KuGou\1234.mp4
+2022-10-12 16:45:09 VideoConverter.java DEBUG start to convert video to flv format...
+2022-10-12 16:45:09 VideoConverter.java DEBUG the file name is : 1234.mp4
+2022-10-12 16:45:09 VideoConverter.java DEBUG the file path is : F:\KuGou\1234.mp4

@@ -14,3 +14,4 @@ Servers/
 
 # Mac #
 .DS_Store
+/out/artifacts/cms/cms.war
