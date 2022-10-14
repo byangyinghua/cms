@@ -39,6 +39,7 @@ import com.alibaba.fastjson.JSONObject;
  * 终端求助控制器
  * <p>mark on 2019年6月6日.</p>
  */
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/help")
 public class HelpController {

@@ -56,7 +56,7 @@ import utils.RedisUtils;
 import sun.rmi.log.LogHandler;
 
 /*管理员账号操作controller*/
-
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/usergroup")
 public class UserGroupController {
@@ -100,7 +100,7 @@ public class UserGroupController {
 		}
 		condMap.put("uid", uid);
 		condMap.put("sort", "create_time asc");
-		Set<String> retTermialGrps =  new HashSet<>();
+		Set<String> retTermialGrps =  new HashSet();
 		List<Map<String, Object>> userGroupList = ms.selectList("UserGroup", "selectByCondition", condMap);
 		if(userGroupList!=null) {
 			System.out.println("checkHasPermission the device has newHelpInfo!terminal_id=" + terminal_id);

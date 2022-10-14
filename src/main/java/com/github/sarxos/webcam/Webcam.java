@@ -257,7 +257,7 @@ public class Webcam {
 	 * In blocking mode, when user calls {@link #getImage()} method, device is being queried for new
 	 * image buffer and user have to wait for it to be available.<br>
 	 * <br>
-	 * In non-blocking mode, there is a special thread running in the background which constantly
+	 * In non-blocking mode, there is a special thread running in the //background which constantly
 	 * fetch new images and cache them internally for further use. This cached instance is returned
 	 * every time when user request new image. Because of that it can be used when timeing is very
 	 * important, because all users calls for new image do not have to wait on device response. By

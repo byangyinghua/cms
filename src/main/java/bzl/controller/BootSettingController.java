@@ -1,49 +1,34 @@
 package bzl.controller;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import bzl.common.Constant;
+import bzl.common.SesCheck;
+import bzl.entity.BootSetting;
+import bzl.entity.User;
+import bzl.service.EntityService;
+import bzl.service.MapService;
+import bzl.task.SocketMsgHandler;
+import bzl.task.cmds;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import sun.rmi.log.LogHandler;
 import utils.Convert;
 import utils.HttpIO;
 import utils.RedisUtils;
 
-import org.apache.commons.lang.RandomStringUtils;
-import org.apache.log4j.Logger;
-
-import bzl.common.Constant;
-import bzl.common.SesCheck;
-import bzl.entity.User;
-import bzl.entity.BootSetting;
-import bzl.entity.Terminal;
-import bzl.service.EntityService;
-import bzl.service.MapService;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-//import org.system.socket.TaskSocket;
-//import org.system.socket.ver2.SocketConnection;
-//import org.system.socket.ver2.SocketServer;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
-import bzl.task.SocketMsgHandler;
-import bzl.task.cmds;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.*;
 
 
 //定时开关机设置
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/bootsetting")
 public class BootSettingController {

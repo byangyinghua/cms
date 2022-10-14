@@ -1,33 +1,20 @@
 package com.github.sarxos.webcam.ds.buildin;
 
-import java.awt.Dimension;
-import java.awt.Transparency;
-import java.awt.color.ColorSpace;
-import java.awt.image.BufferedImage;
-import java.awt.image.ColorModel;
-import java.awt.image.ComponentColorModel;
-import java.awt.image.ComponentSampleModel;
-import java.awt.image.DataBuffer;
-import java.awt.image.DataBufferByte;
-import java.awt.image.Raster;
-import java.awt.image.WritableRaster;
-import java.nio.ByteBuffer;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
-
+import com.github.sarxos.webcam.*;
+import com.github.sarxos.webcam.WebcamDevice.BufferAccess;
+import com.github.sarxos.webcam.ds.buildin.natives.Device;
+import com.github.sarxos.webcam.ds.buildin.natives.DeviceList;
+import com.github.sarxos.webcam.ds.buildin.natives.OpenIMAJGrabber;
 import org.bridj.Pointer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.github.sarxos.webcam.WebcamDevice;
-import com.github.sarxos.webcam.WebcamDevice.BufferAccess;
-import com.github.sarxos.webcam.WebcamException;
-import com.github.sarxos.webcam.WebcamExceptionHandler;
-import com.github.sarxos.webcam.WebcamResolution;
-import com.github.sarxos.webcam.WebcamTask;
-import com.github.sarxos.webcam.ds.buildin.natives.Device;
-import com.github.sarxos.webcam.ds.buildin.natives.DeviceList;
-import com.github.sarxos.webcam.ds.buildin.natives.OpenIMAJGrabber;
+import java.awt.*;
+import java.awt.color.ColorSpace;
+import java.awt.image.*;
+import java.nio.ByteBuffer;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class WebcamDefaultDevice implements WebcamDevice, BufferAccess, Runnable, WebcamDevice.FPSSource {

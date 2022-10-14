@@ -1,5 +1,14 @@
 package utils;
 
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang.StringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.io.HTMLWriter;
+import org.dom4j.io.OutputFormat;
+
 import java.beans.XMLDecoder;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -11,27 +20,9 @@ import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.lang.RandomStringUtils;
-import org.apache.commons.lang.StringUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.dom4j.Document;
-import org.dom4j.DocumentHelper;
-import org.dom4j.io.HTMLWriter;
-import org.dom4j.io.OutputFormat;
 
 /**
  * 字符串处理及转换工具类
@@ -242,7 +233,6 @@ public class StringUtil
 	 * @param len
 	 *            　字符串长度　长度计量单位为一个GBK汉字　　两个英文字母计算为一个单位长度
 	 * @param str
-	 * @param symbol
 	 * @return12
 	 */
 	public static String getLimitLengthString(String str, int len)
@@ -1178,7 +1168,7 @@ public class StringUtil
 	/**
 	 * 根据正则表达式提取字符串,相同的字符串只返回一个
 	 * 
-	 * @param str源字符串
+	 * @param str
 	 * @param pattern
 	 *            正则表达式
 	 * @return 目标字符串数据组
@@ -1440,7 +1430,7 @@ public class StringUtil
 	 * *************************************************************************
 	 * 用要通过URL传输的内容进行编码
 	 * 
-	 * @param 源字符串
+	 * @param src
 	 * @return 经过编码的内容
 	 ************************************************************************* 
 	 */
@@ -1468,7 +1458,7 @@ public class StringUtil
 	 * *************************************************************************
 	 * 
 	 * @author 李锋 2007.4.18
-	 * @param 传入
+	 * @param  str
 	 *            &#31119;test&#29031;&#27004;&#65288;&#21271;&#22823;&#38376;&#
 	 *            24635 ;&#24215;&#65289;&#31119;
 	 * @return 经过解码的内容
@@ -1504,7 +1494,7 @@ public class StringUtil
 	 * 
 	 * @author yxg
 	 * @date 2007-09-17
-	 * @param str
+	 * @param subject
 	 * @return
 	 */
 	public static String subYhooString(String subject, int size)
@@ -2163,7 +2153,7 @@ public class StringUtil
 	/**
 	 * 判断这个类是不是java自带的类
 	 * 
-	 * @param clazz
+	 * @param
 	 * @return
 	 */
 	public static String getEmptyString()
@@ -2210,13 +2200,13 @@ public class StringUtil
 	 * 
 	 * @Title: 
 	 * 
-	 * @param Date
+	 * @param theDate
 	 * 
 	 * @return
 	 */
 	
 	public static String dateToString(Date theDate) {
-		return String.format("%d%02d%02d%02d%02d%02d", theDate.getYear(),theDate.getMonth(),theDate.getDay(),theDate.getHours(),theDate.getMinutes(),theDate.getSeconds());
+		return String.format(theDate.toString());
 	}
 	
 	

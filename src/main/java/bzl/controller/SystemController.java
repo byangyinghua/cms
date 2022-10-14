@@ -1,64 +1,37 @@
 package bzl.controller;
 
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
+import bzl.common.Constant;
+import bzl.common.MemoryCache;
+import bzl.common.SesCheck;
+import bzl.entity.ServerUpdate;
+import bzl.entity.User;
+import bzl.service.EntityService;
+import bzl.service.MapService;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import sun.rmi.log.LogHandler;
+import utils.Convert;
+import utils.FileUtil;
+import utils.HttpIO;
+import utils.ZipUtil;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
-import java.util.TimeZone;
+import java.util.*;
 
-import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.lang.RandomStringUtils;
-import org.apache.log4j.Logger;
-
-import bzl.common.Constant;
-import bzl.common.MemoryCache;
-import bzl.common.SesCheck;
-import bzl.entity.LoginLog;
-import bzl.entity.ServerUpdate;
-import bzl.entity.TerminalUpdate;
-import bzl.entity.User;
-import bzl.service.EntityService;
-import bzl.service.MapService;
-import bzl.task.SocketMsgHandler;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
-import utils.Convert;
-import utils.EncryptionUtil;
-import utils.FileUtil;
-import utils.HttpIO;
-import utils.NetUtil;
-import utils.RedisUtils;
-import utils.ZipUtil;
-import sun.rmi.log.LogHandler;
-
-
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/system")
 public class SystemController {

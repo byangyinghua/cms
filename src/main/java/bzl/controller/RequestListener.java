@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Component;
 
 import groovy.util.logging.Slf4j;
-
+@SuppressWarnings("unchecked")
 /**
  * 监听器类:主要任务是用ServletRequest将我们的HttpSession携带过去
  * @author 

@@ -54,7 +54,7 @@ import utils.UUIDUtil;
 import sun.rmi.log.LogHandler;
 
 /*管理员账号操作controller*/
-
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/video")
 public class VideoController {

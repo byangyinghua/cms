@@ -33,7 +33,7 @@ import bzl.service.EntityService;
 import bzl.service.MapService;
 import sun.rmi.log.LogHandler;
 import utils.HttpIO;
-
+@SuppressWarnings("unchecked")
 //考试信息处理设置 controller
 @Controller
 @RequestMapping("/exam")

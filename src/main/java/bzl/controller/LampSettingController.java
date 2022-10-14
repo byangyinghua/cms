@@ -44,6 +44,7 @@ import bzl.task.SocketMsgHandler;
 import bzl.task.cmds;
 
 //定时开关机设置
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/lampsetting")
 public class LampSettingController {

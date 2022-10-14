@@ -41,7 +41,7 @@ import utils.ClassRefUtil;
 import sun.rmi.log.LogHandler;
 import utils.ResultModel;
 
-
+@SuppressWarnings("unchecked")
 @Component
 @Transactional
 @Service

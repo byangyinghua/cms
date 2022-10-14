@@ -1,71 +1,38 @@
 package bzl.controller;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.ParseException;
-//import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-//import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
-//import java.util.UUID;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-//import net.sf.json.JSONObject;
-import sun.rmi.log.LogHandler;
-import utils.Convert;
-import utils.HttpIO;
-import utils.RedisUtils;
-//import utils.NetUtil;
-//import utils.StringUtil;
-//import utils.TimeUtil;
-import utils.ZipUtil;
-import utils.FileUtil;
-
-import org.apache.commons.lang.RandomStringUtils;
-//import org.apache.ibatis.session.SqlSession;
-import org.apache.log4j.Logger;
-
-import org.springframework.beans.factory.annotation.Autowired;
-//import bzl.service.impl.JDBCTransaction;
-//import utils.StringUtil;
-//import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.RequestParam;
-//import utils.SessionFactory;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-//import com.netsdk.common.SavePath;
-
 import bzl.common.Constant;
 import bzl.common.SesCheck;
-import bzl.entity.ExamInfo;
-//import bzl.entity.BootSetting;
 import bzl.entity.ExamTask;
 import bzl.entity.TaskInfo;
-//import bzl.entity.Terminal;
 import bzl.entity.TerminalLog;
 import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
 import bzl.task.SocketMsgHandler;
 import bzl.task.cmds;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import sun.rmi.log.LogHandler;
+import utils.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /*任务管理操作 controller */
-
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/task")
 public class TaskController {

@@ -1,27 +1,5 @@
 package bzl.controller;
 
-
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import javax.imageio.ImageIO;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import groovy.util.logging.Log4j;
-import org.apache.commons.lang.RandomStringUtils;
-import org.apache.log4j.Logger;
-
 import bzl.common.Constant;
 import bzl.common.MemoryCache;
 import bzl.common.SesCheck;
@@ -29,27 +7,74 @@ import bzl.entity.LoginLog;
 import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import sun.rmi.log.LogHandler;
+import utils.Convert;
+import utils.EncryptionUtil;
+import utils.HttpIO;
+import utils.RedisUtils;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.List;
+import java.util.*;
+
+/*
+import bzl.common.Constant;
+import bzl.common.MemoryCache;
+import bzl.common.SesCheck;
+import bzl.entity.LoginLog;
+import bzl.entity.User;
+import bzl.service.EntityService;
+import bzl.service.MapService;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import sun.rmi.log.ReliableLog;
+import utils.Convert;
+import utils.EncryptionUtil;
+import utils.HttpIO;
+import utils.RedisUtils;
 
-import utils.*;
-import sun.rmi.log.LogHandler;
-
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.List;
+import java.util.*;
+*/
 /*管理员账号操作controller*/
-
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/account")
 public class AccountController {
 	private static int loginExpiredSec = 12*3600;
 
-	// private static Logger logger = Logger.getLogger(UserController.class);
+	//private static Logger logger = Logger.getLogger(UserController.class);
 	Logger log = Logger.getLogger(LogHandler.class);
 	@Autowired
 	private MapService ms;
@@ -57,7 +82,7 @@ public class AccountController {
 	private EntityService es;
 	
 	private static MemoryCache localMemCache = new MemoryCache();
- 
+
 	Color getRandColor(int fc, int bc) {// 给定范围获得随机颜色 用户验证码
 		Random random = new Random();
 		if (fc > 255)

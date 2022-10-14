@@ -1,16 +1,17 @@
 package com.netsdk.demo.module;
 
-import com.netsdk.lib.NativeString;
-import com.netsdk.lib.NetSDKLib;
-import com.netsdk.lib.NetSDKLib.*;
-import com.netsdk.lib.ToolKits;
-import com.sun.jna.Memory;
-import com.sun.jna.Pointer;
-
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.netsdk.lib.NativeString;
+import com.netsdk.lib.NetSDKLib;
+import com.netsdk.lib.ToolKits;
+import com.netsdk.lib.NetSDKLib.*;
+
+import com.sun.jna.Memory;
+import com.sun.jna.Pointer;
 
 /**
  * IVSS 和 IPC-FR 人脸功能接口实现, IPC-FD只支持人脸检测事件
@@ -33,8 +34,8 @@ public class FaceRecognitionModule {
 	public static LLong realLoadPicture(int channel, fAnalyzerDataCallBack callback) {
 		int bNeedPicture = 1; // 是否需要图片
 	
-		LLong m_hAttachHandle =  LoginModule.netsdk.CLIENT_RealLoadPictureEx(LoginModule.m_hLoginHandle, channel,
-				NetSDKLib.EVENT_IVS_ALL, bNeedPicture, callback, null, null);
+		LLong m_hAttachHandle =  LoginModule.netsdk.CLIENT_RealLoadPictureEx(LoginModule.m_hLoginHandle, channel, 
+									NetSDKLib.EVENT_IVS_ALL, bNeedPicture, callback, null, null);
         if(m_hAttachHandle.longValue() == 0) {
         	System.err.println("CLIENT_RealLoadPictureEx Failed, Error:" + ToolKits.getErrorCodePrint());
         } else {
@@ -752,9 +753,9 @@ public class FaceRecognitionModule {
 
 	/**
 	 * 显示/关闭规则库
-	 * @param m_hRealPlayHandle  实时预览
+	 * @param RealPlayHandle  实时预览
 	 * @param bTrue    1-打开, 0-关闭
-
+	 * @return
 	 */
 	public static void renderPrivateData(LLong m_hRealPlayHandle, int bTrue) {
 		if(m_hRealPlayHandle.longValue() != 0) {

@@ -1,33 +1,32 @@
 package bzl.init;
 
-import java.io.*;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import bzl.entity.LocalProjectConfig;
-import com.google.gson.Gson;
-import org.apache.commons.lang.RandomStringUtils;
-import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-
 import bzl.common.Configure;
 import bzl.common.Constant;
-import bzl.controller.AccountController;
+import bzl.entity.LocalProjectConfig;
 import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
 import bzl.service.impl.EntityServiceImpl;
 import bzl.service.impl.MapServiceImpl;
-import bzl.task.AdjustTimeTask;
 import bzl.task.LivePlayTask;
 import bzl.task.RtmpManagerTask;
+import com.google.gson.Gson;
+import org.apache.commons.lang.RandomStringUtils;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import utils.EncryptionUtil;
 import utils.Log;
 import utils.RedisUtils;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+@SuppressWarnings("unchecked")
 public class SystemInit implements ApplicationContextAware{
 	private static MapService ms = new MapServiceImpl();
 	private static EntityService es = new EntityServiceImpl();
