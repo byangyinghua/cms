@@ -1,21 +1,19 @@
 package bzl.common;
 
+import bzl.entity.User;
+import bzl.service.EntityService;
+import com.alibaba.fastjson.JSONObject;
+import utils.EncryptionUtil;
+import utils.RedisUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-
-import com.alibaba.fastjson.JSONObject;
-
-import bzl.entity.User;
-import bzl.service.EntityService;
-import utils.EncryptionUtil;
-import utils.RedisUtils;
-
+@SuppressWarnings("unchecked")
 public class SesCheck {
 	private static int loginExpiredSec = 12*3600;
 	//private static EntityService es = new EntityService();

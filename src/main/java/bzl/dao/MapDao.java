@@ -1,25 +1,19 @@
 package bzl.dao;
 
+import bzl.dao.inter.MapIDao;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.log4j.Logger;
+import sun.rmi.log.LogHandler;
+import utils.DjSessionFactory;
+import utils.SessionFactory;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.log4j.Logger;
-import bzl.dao.inter.MapIDao;
-import bzl.entity.User;
-import utils.DjSessionFactory;
-//import utils.MyListener;
-import utils.SessionFactory;
-//import utils.XMLHelper;
-
-import sun.rmi.log.LogHandler;
-
+@SuppressWarnings("unchecked")
 public class MapDao<T> implements MapIDao<T> {
 	private static SqlSessionFactory sessionFactory = SessionFactory.getInstance().getSqlSessionFactory();  
 	private static SqlSessionFactory djsessionFactory = DjSessionFactory.getInstance().getSqlSessionFactory();  

@@ -1,76 +1,59 @@
 package bzl.task;
 
-import java.io.IOException;
-import java.lang.management.ManagementFactory;
-import java.lang.management.RuntimeMXBean;
-import java.net.InetSocketAddress;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import org.springframework.beans.BeansException;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
-
-import com.boyao.boyaonetlib.MsgSendImpl;
-import com.boyao.boyaonetlib.acceptor.UdpMsgAcceptor;
-import com.boyao.boyaonetlib.beans.ByUdpMsgInfo;
-import com.boyao.boyaonetlib.interfaces.IMsgHandler;
-import com.boyao.boyaonetlib.util.SequenceUtil;
-
 import bzl.common.Configure;
 import bzl.common.Constant;
-import bzl.common.MemoryCache;
-import bzl.controller.VideoController;
 import bzl.entity.HelpInfo;
 import bzl.entity.Terminal;
 import bzl.entity.TerminalLog;
-import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
 import bzl.service.impl.EntityServiceImpl;
 import bzl.service.impl.MapServiceImpl;
 import bzl.websocket.WebSocketEndpoint;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONException;
+import com.alibaba.fastjson.JSONObject;
+import com.boyao.boyaonetlib.MsgSendImpl;
+import com.boyao.boyaonetlib.acceptor.UdpMsgAcceptor;
+import com.boyao.boyaonetlib.beans.ByUdpMsgInfo;
+import com.boyao.boyaonetlib.interfaces.IMsgHandler;
+import com.boyao.boyaonetlib.util.SequenceUtil;
+import org.apache.log4j.Logger;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import sun.rmi.log.LogHandler;
 import utils.Log;
 import utils.RedisUtils;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONException;
-import com.alibaba.fastjson.JSONObject;
-import org.apache.log4j.Logger;
+import java.net.InetSocketAddress;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class SocketMsgHandler implements ApplicationContextAware {
 	static Logger log = Logger.getLogger(LogHandler.class);
 
-	private static SocketMsgHandler instance = new SocketMsgHandler();
+	private static final SocketMsgHandler instance = new SocketMsgHandler();
 
 	private static UdpMsgAcceptor msgHandler = null;
-	private static Integer socketPort = 7654;
-	private static Integer broadcastPort = 7655;
-	private static String broadcastAddress = "192.168.255.255";
+	private static final Integer socketPort = 7654;
+	private static final Integer broadcastPort = 7655;
+	private static final String broadcastAddress = "192.168.255.255";
 
-	private static int updSuccess = 1; // 回复终端消息处理成功
-	private static int udpFailed = 2; // 回复终端消息处理失败
+	private static final int updSuccess = 1; // 回复终端消息处理成功
+	private static final int udpFailed = 2; // 回复终端消息处理失败
 
-	private static Map<Integer, Object> responseMap = new HashMap<Integer, Object>();
+	private static final Map<Integer, Object> responseMap = new HashMap<Integer, Object>();
 
 	private static MapService ms = new MapServiceImpl();
-	private static EntityService es = new EntityServiceImpl();
+	protected static EntityService es = new EntityServiceImpl();
 
 	// private static MemoryCache localMemCache = new MemoryCache();
 
-	private static int HeartBeatRate = 8; // 5s
+	private static final int HeartBeatRate = 8; // 5s
 	//终端状态维持时间
-	private static int TernimalExpireTime = HeartBeatRate * 3;
+	private static final int TernimalExpireTime = HeartBeatRate * 3;
 	
 	private static MapService getMsqlMapCtr() {
 		if(ms==null) {
@@ -115,7 +98,7 @@ public class SocketMsgHandler implements ApplicationContextAware {
 		return null;
 	}
 
-	private  IMsgHandler recvHandler = new IMsgHandler() {
+	private final IMsgHandler recvHandler = new IMsgHandler() {
 		@Override
 		public String onHandleData(InetSocketAddress terminalInfo, int sequece, int packageType, int cmd, String body) {
 			// TODO Auto-generated method stub
@@ -259,7 +242,7 @@ public class SocketMsgHandler implements ApplicationContextAware {
 					condTerminal.put("ip",terminalInfo.getAddress().getHostAddress());// deviceId 是终端的唯一标志
 					list = getMsqlMapCtr().selectList("Terminal", "selectByCondition", condTerminal);
 					if(list!=null && list.size() >0) {
-						String onlineInfo = RedisUtils.get(Constant.OnlineTerminals + ":" + (String) list.get(0).get("terminal_id"));
+						String onlineInfo = RedisUtils.get(Constant.OnlineTerminals + ":" + list.get(0).get("terminal_id"));
 						if(onlineInfo==null) {
 							result = getMsqlEntityCtr().delete("Terminal", "delete", condTerminal);
 						}
@@ -280,12 +263,12 @@ public class SocketMsgHandler implements ApplicationContextAware {
 					condTerminal.put("ip",terminalInfo.getAddress().getHostAddress());// deviceId 是终端的唯一标志
 					list = getMsqlMapCtr().selectList("Terminal", "selectByCondition", condTerminal);
 					if(list!=null && list.size() >0) {
-						String onlineInfo = RedisUtils.get(Constant.OnlineTerminals + ":" + (String) list.get(0).get("terminal_id"));
+						String onlineInfo = RedisUtils.get(Constant.OnlineTerminals + ":" + list.get(0).get("terminal_id"));
 						if(onlineInfo==null) {
 							result = getMsqlEntityCtr().delete("Terminal", "delete", condTerminal);
 						}
 					}
-					log.error("2222v the device has register,return failed!newTerminal=" + newTerminal.toString());
+					log.error("2222v the device has register,return failed!newTerminal=" + newTerminal);
 					respBody.put("status", udpFailed);
 				}
 			}

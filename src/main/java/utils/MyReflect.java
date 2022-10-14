@@ -17,7 +17,7 @@ import java.util.TimeZone;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+@SuppressWarnings("unchecked")
 public class MyReflect<T> {
 	public Class<?> getCls() {
 		return cls;

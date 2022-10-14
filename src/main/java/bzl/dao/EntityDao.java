@@ -13,6 +13,7 @@ import utils.SessionFactory;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+@SuppressWarnings("unchecked")
 @Component
 public class EntityDao<T> implements EntityIDao<T> {
 		//ApplicationContext ctx = new ClassPathXmlApplicationContext("usermap-servlet.xml");

@@ -1,27 +1,5 @@
 package bzl.controller;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipInputStream;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import utils.*;
-//import net.sf.json.JSONObject;
 import bzl.common.Constant;
 import bzl.common.SesCheck;
 import bzl.entity.Terminal;
@@ -30,32 +8,25 @@ import bzl.entity.TerminalUpdate;
 import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
-import bzl.service.impl.JDBCTransaction;
 import bzl.task.SocketMsgHandler;
 import bzl.task.cmds;
-import sun.rmi.log.LogHandler;
-
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-//import utils.StringUtil;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-//import org.system.socket.TaskSocket;
-//import org.system.socket.ver2.SocketConnection;
-//import org.system.socket.ver2.SocketServer;
-//import utils.NowTime;
-//import utils.Writer;
-import org.xnx.sql.util.SQLTools;
+import sun.rmi.log.LogHandler;
+import utils.*;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.ibm.icu.text.DateFormat;
-
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileNotFoundException;
+import java.text.SimpleDateFormat;
+import java.util.*;
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/terminal")
 public class TerminalController {

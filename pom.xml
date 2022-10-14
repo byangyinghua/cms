@@ -258,7 +258,7 @@
 		<dependency>
 			<groupId>net.sf.jasperreports</groupId>
 			<artifactId>jasperreports</artifactId>
-			<version>6.4.0</version>
+			<version>6.8.0</version>
 			<exclusions>
 				<exclusion>
 					<groupId>com.lowagie</groupId>
@@ -266,6 +266,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.lowagie/itext -->
 		<dependency>
 			<groupId>com.lowagie</groupId>
@@ -403,6 +404,7 @@
 		</dependency>
 
 
+
 		<!-- <dependency> <groupId>com.sun.jna</groupId> <artifactId>jna</artifactId> 
 			<version>4.1.0</version> </dependency> -->
 		<!-- end 公众号工具包 -->
@@ -448,25 +450,58 @@
 					</compilerArguments>
 				</configuration>
 			</plugin>
-			<!-- 打包war -->
+			<!-- 打包jar 使用maven-jar-plugin插件打包的，指定主类即可-->
 			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.2</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
 				<configuration>
-
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-					<webResources>
-						<resource>
-							<directory>${basedir}/libs</directory>
-							<targetPath>WEB-INF/lib</targetPath>
-							<includes>
-								<include>**/*.jar</include>
-							</includes>
-						</resource>
-					</webResources>
+					<archive>
+						<!--<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>-->
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>**/bzl.controller/AccountController.java</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+            <!-- 打包war -->
+			<!--
+                        <plugin>
+                            <artifactId>maven-war-plugin</artifactId>
+                            <version>2.2</version>
+                            <configuration>
+                                <failOnMissingWebXml>false</failOnMissingWebXml>
+                                <webResources>
+                                    <resource>
+                                        <directory>${basedir}/libs</directory>
+                                        <targetPath>WEB-INF/lib</targetPath>
+                                        <includes>
+                                            <include>**/*.jar</include>
+                                        </includes>
+                                    </resource>
+                                </webResources>
+                            </configuration>
+                        </plugin>
+        -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>

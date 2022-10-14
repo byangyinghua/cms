@@ -1,61 +1,19 @@
 package bzl.controller;
 
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.UUID;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.commons.lang.RandomStringUtils;
-
-//import net.sf.json.JSONArray;
-//import net.sf.json.JSONObject;
-
-import org.apache.log4j.Logger;
-
 import bzl.common.Configure;
 import bzl.common.Constant;
 import bzl.common.SesCheck;
-import bzl.entity.Attachment;
-import bzl.entity.User;
 import bzl.entity.TerminalLog;
-import bzl.entity.UserLog;
-
-
+import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
-//import utils.StringUtil;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,30 +21,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-import org.springframework.web.servlet.ModelAndView;
-
-import utils.Convert;
-//import utils.CommUtil;
-//import utils.Convert;
-import utils.EncryptionUtil;
-import utils.FileUtil;
-import utils.HttpIO;
-//import utils.JModelAndView;
-//import utils.MyListener;
-import utils.MyReflect;
-import utils.NetUtil;
-import utils.RedisUtils;
-//import utils.URLEncoder;
-import utils.UUIDUtil;
-//import utils.Writer;
-import utils.ZipUtil;
-
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-import com.ibm.icu.impl.duration.impl.DataRecord.EUnitVariant;
-
 import sun.rmi.log.LogHandler;
+import utils.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/file")
 public class FileController {

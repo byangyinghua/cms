@@ -1,33 +1,25 @@
 package bzl.task;
 
-import org.apache.commons.net.ntp.NTPUDPClient;
-import org.apache.commons.net.ntp.TimeInfo;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.Date;
-import java.util.List;
-
-import org.apache.commons.net.ntp.TimeStamp;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Set;
-import java.util.TimeZone;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.io.BufferedReader;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import com.alibaba.fastjson.JSONObject;
-
 import bzl.common.Callback;
 import bzl.common.Constant;
 import bzl.common.SonThread;
-import utils.RedisUtils;
-import bzl.task.cmds;
+import com.alibaba.fastjson.JSONObject;
 import gnu.io.SerialPort;
+import org.apache.commons.net.ntp.NTPUDPClient;
+import org.apache.commons.net.ntp.TimeInfo;
+import org.apache.commons.net.ntp.TimeStamp;
+import utils.RedisUtils;
 import utils.SerialTool;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class AdjustTimeTask {
 	static String[] ntpTimeServers = new String[] { "ntp1.aliyun.com", "ntp2.aliyun.com", // 阿里云

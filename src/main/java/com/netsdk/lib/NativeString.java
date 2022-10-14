@@ -1,11 +1,11 @@
 package com.netsdk.lib;
 
-import java.io.UnsupportedEncodingException;
-import java.nio.CharBuffer;
-
 import com.sun.jna.Memory;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
+
+import java.io.UnsupportedEncodingException;
+import java.nio.CharBuffer;
 
 
 /** Provides a temporary allocation of an immutable C string 
@@ -17,8 +17,8 @@ import com.sun.jna.Pointer;
  */
 public class NativeString implements CharSequence, Comparable<Object> {
 
-    private Pointer pointer;
-    private boolean wide;
+    public Pointer pointer;
+    public boolean wide;
 
     /** Create a native string (NUL-terminated array of <code>char</code>).<p>
      * If the system property <code>jna.encoding</code> is set, its value will
@@ -50,7 +50,7 @@ public class NativeString implements CharSequence, Comparable<Object> {
         if (wide) {
             int len = (string.length() + 1 ) * Native.WCHAR_SIZE;
             pointer = new Memory(len);
-            pointer.setString(0, string, true);
+            pointer.setString(0, string);
         }
         else {
             byte[] data = getBytes(string);
@@ -93,7 +93,7 @@ public class NativeString implements CharSequence, Comparable<Object> {
 
     public String toString() {
         String s = wide ? "const wchar_t*" : "const char*";
-        s += "(" + pointer.getString(0, wide) + ")";
+        s += "(" + pointer.getString(0) + ")";
         return s;
     }
 

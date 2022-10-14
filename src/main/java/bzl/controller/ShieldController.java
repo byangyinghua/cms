@@ -1,62 +1,34 @@
 package bzl.controller;
 
-import java.io.IOException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TimeZone;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-//import net.sf.json.JSONArray;
-//import net.sf.json.JSONObject;
-import sun.rmi.log.LogHandler;
-
-import org.apache.commons.lang.RandomStringUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
-
 import bzl.common.Constant;
 import bzl.common.SesCheck;
 import bzl.entity.BootSetting;
 import bzl.entity.ShieldTask;
-import bzl.entity.Terminal;
 import bzl.entity.User;
 import bzl.service.EntityService;
 import bzl.service.MapService;
-import bzl.service.impl.JDBCTransaction;
 import bzl.task.SocketMsgHandler;
 import bzl.task.cmds;
-
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.TransactionStatus;
-import org.springframework.transaction.support.TransactionCallback;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import sun.rmi.log.LogHandler;
 import utils.Convert;
 import utils.HttpIO;
 import utils.RedisUtils;
 import utils.TimeUtil;
 
-import org.xnx.sql.util.SQLTools;
-
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
-
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.text.SimpleDateFormat;
+import java.util.*;
+@SuppressWarnings("unchecked")
 @Controller
 @RequestMapping("/shield")
 public class ShieldController {

@@ -1,19 +1,13 @@
 package utils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import com.alibaba.fastjson.JSONObject;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
-import redis.clients.jedis.JedisShardInfo;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Redis工具类
@@ -62,7 +56,7 @@ public class RedisUtils {
 	//模糊匹配key
 	
 	public static Set<String> getKeys(String prefixStr){
-      try (Jedis jedis = jedisPool.getResource();) {
+      try (Jedis jedis = jedisPool.getResource()) {
 			return jedis.keys(prefixStr + "*");
 		}
 	}

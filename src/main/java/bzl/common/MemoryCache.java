@@ -12,10 +12,12 @@ import java.util.concurrent.ConcurrentHashMap;
  * @date: 2019/3/14 17:25
  * @version: V1.0
  */
+
+@SuppressWarnings("unchecked")
 public class MemoryCache {
  
     // 容器
-    private  Map<String, CacheData> CACHE_DATA = new ConcurrentHashMap<>();
+    private  Map<String, CacheData> CACHE_DATA = new ConcurrentHashMap();
  
     
     /**

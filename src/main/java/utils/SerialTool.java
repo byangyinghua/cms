@@ -1,19 +1,12 @@
 package utils;
 
+import gnu.io.*;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.TooManyListenersException;
-
-import gnu.io.CommPort;
-import gnu.io.CommPortIdentifier;
-import gnu.io.NoSuchPortException;
-import gnu.io.PortInUseException;
-import gnu.io.SerialPort;
-import gnu.io.SerialPortEventListener;
-import gnu.io.UnsupportedCommOperationException;
 
 /**
  * 串口类，用于获取串口的一系列数据
@@ -58,7 +51,7 @@ public class SerialTool {
         @SuppressWarnings("unchecked")
 		Enumeration<CommPortIdentifier> portList = CommPortIdentifier.getPortIdentifiers();    
         
-        ArrayList<String> portNameList = new ArrayList<>();
+        ArrayList<String> portNameList = new ArrayList();
 
         //将可用串口名添加到List并返回该List
         while (portList.hasMoreElements()) {
@@ -120,7 +113,7 @@ public class SerialTool {
     
     /**
      * 关闭串口
-     * @param serialport 待关闭的串口对象
+     * @param serialPort 待关闭的串口对象
      */
     public static void closePort(SerialPort serialPort) {
         if (serialPort != null) {
